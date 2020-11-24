@@ -3,6 +3,7 @@ package com.study.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.study.domain.User;
+import com.study.domain.VO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,11 +11,24 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")
 public class UserController {
 
+    @RequestMapping("/quick11")
+    @ResponseBody
+    public void getJsonObject2(VO vo) throws JsonProcessingException {
+        System.out.println(vo.toString());
+    }
+
+    @RequestMapping("/quick10")
+    @ResponseBody
+    public String getJsonObject2(String[] args) throws JsonProcessingException {
+        return args.toString();
+    }
 
     @RequestMapping("/quick9")
     @ResponseBody
