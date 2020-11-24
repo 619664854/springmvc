@@ -18,7 +18,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring-01" target="1.8" />
-      <module name="spring-06-tx-anno" target="1.8" />
       <module name="spring-07-mvc" target="1.8" />
       <module name="springStudy-01" target="1.5" />
       <module name="springStudy-02-JDBC" target="1.5" />
