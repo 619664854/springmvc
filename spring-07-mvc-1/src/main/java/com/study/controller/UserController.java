@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 @Controller
 @RequestMapping("/user")
@@ -20,25 +19,25 @@ public class UserController {
 
     @RequestMapping("/quick11")
     @ResponseBody
-    public void getJsonObject2(VO vo) throws JsonProcessingException {
+    public void getJsonObject2(VO vo)  {
         System.out.println(vo.toString());
     }
 
     @RequestMapping("/quick10")
     @ResponseBody
-    public String getJsonObject2(String[] args) throws JsonProcessingException {
-        return args.toString();
+    public String getJsonObject2(String[] args)  {
+        return Arrays.toString(args);
     }
 
     @RequestMapping("/quick9")
     @ResponseBody
-    public User getJsonObject2(User user) throws JsonProcessingException {
+    public User getJsonObject2(User user)  {
         return user;
     }
 
     @RequestMapping("/quick8")
     @ResponseBody
-    public User getJsonObject1(String name,int age) throws JsonProcessingException {
+    public User getJsonObject1(String name,int age) {
         User user = new User();
         user.setUserName(name);
         user.setAge(age);
@@ -47,7 +46,7 @@ public class UserController {
 
     @RequestMapping("/quick7")
     @ResponseBody
-    public User getJsonObject() throws JsonProcessingException {
+    public User getJsonObject() {
         User user = new User();
         user.setUserName("张三");
         user.setAge(10);
@@ -56,7 +55,7 @@ public class UserController {
 
     @RequestMapping("/quick6")
     @ResponseBody
-    public String getJson(HttpServletRequest request) throws JsonProcessingException {
+    public String getJson() throws JsonProcessingException {
         User user = new User();
         user.setUserName("张三");
         user.setAge(10);
@@ -105,6 +104,6 @@ public class UserController {
     @RequestMapping("/quick")
     public String getUser(){
         System.out.println("running123");
-        return "success";/*如果添加了部资源视图解析器InternalResourceViewResolver*/
+        return "/jsp/success.jsp";/*如果添加了部资源视图解析器InternalResourceViewResolver*/
     }
 }
