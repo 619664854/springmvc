@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user" class="com.css.domain.User">
+        <property name="name" value="测试"></property>
+        <property name="age" value="1"></property>
+    </bean>
+    <bean id="userDao" class="com.css.dao.UserDaoImpl">
+        <property name="strList">
+            <list>
+                <value>"张三"</value>
+                <value>"李四"</value>
+                <value>"王五"</value>
+            </list>
+        </property>
+        <property name="userMap">
+            <map>
+                <entry key="user" value-ref="user"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="userService" class="com.css.service.UserServiceImpl">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+
+</beans>

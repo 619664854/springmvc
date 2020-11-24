@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--目标对象-->
+    <bean id="target" class="com.study.aop.Target"></bean>
+    <!--切面对象-->
+    <bean id="myAspect" class="com.study.aop.MyAspect"></bean>
+    <!--配置织入 告诉spring那些方法（切点）需要进行哪些增强(前置、后置)-->
+    <aop:config>
+        <!--声明切面-->
+        <aop:aspect ref="myAspect">
+            <!--抽取切点表达式-->
+            <aop:pointcut id="myAspect" expression="execution(* com.study.aop.*.*(..))"/>
+            <!--切面：切点+通知-->  <!--↓[修饰符] 返回类型  包名.类名.方法名(参数)可以用*代表任意包名、类名、方法名 ..可以代表任意参数或者包下及其子包下的所有-->
+            <!--            <aop:before method="before" pointcut="execution(public void com.study.aop.Target.save())"></aop:before>-->
+            <!--            <aop:after-returning method="afterReturning" pointcut="execution(public void com.study.aop.Target.save())"></aop:after-returning>-->
+            <!--            <aop:around method="round" pointcut="execution(* com.study.aop.*.*(..))"/>-->
+            <!--            <aop:after-throwing method="afterThrowing" pointcut="execution(* com.study.aop.*.*(..))"/>-->
+            <!--            <aop:after method="after" pointcut="execution(* com.study.aop.*.*(..))"/>-->
+            <aop:after method="afterReturning" pointcut-ref="myAspect"/>
+        </aop:aspect>
+    </aop:config>
+
+</beans>
