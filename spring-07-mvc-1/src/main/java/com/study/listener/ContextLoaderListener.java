@@ -17,6 +17,9 @@ public class ContextLoaderListener implements ServletContextListener {
 //        ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
         //将spring的应用上下文对象存储到ServletCo域中ntext
         servletContextEvent.getServletContext().setAttribute("app",app);
+
+
+
         System.out.println("监听器启动成功");
     }
 
