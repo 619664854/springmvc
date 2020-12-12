@@ -22,7 +22,7 @@ public class UserController {
     @ResponseBody   //http://127.0.0.1:8080/spring/user/quick12?name=zhangsan
     // 默认请求必须存在参数 如果不是必须的可以设置required为false
     public void getJsonObject2(@RequestParam(value = "name",required = false) String username)  {
-        System.out.println(username);
+        System.out.println(username+"1");
     }
 
     @RequestMapping("/quick11")
