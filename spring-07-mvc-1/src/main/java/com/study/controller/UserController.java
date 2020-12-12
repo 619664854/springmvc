@@ -7,6 +7,7 @@ import com.study.domain.VO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -16,6 +17,13 @@ import java.util.Arrays;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+
+    @RequestMapping("/quick12")
+    @ResponseBody   //http://127.0.0.1:8080/spring/user/quick12?name=zhangsan
+    // 默认请求必须存在参数 如果不是必须的可以设置required为false
+    public void getJsonObject2(@RequestParam(value = "name",required = false) String username)  {
+        System.out.println(username);
+    }
 
     @RequestMapping("/quick11")
     @ResponseBody

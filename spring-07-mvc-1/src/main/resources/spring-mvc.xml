@@ -15,6 +15,10 @@
     </context:component-scan>
     <!--mvc注解驱动可以自动添加视图解析器和映射器-->
     <mvc:annotation-driven></mvc:annotation-driven>
+    <!-- 开发资源的访问-->
+    <!--<mvc:resources mapping="/js/**" location="/js/"/>
+    <mvc:resources mapping="/img/**" location="/img/"/>-->
+    <mvc:default-servlet-handler/>
     <!--配置内部资源视图解析器-->
    <!-- <bean name="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/jsp/"></property>
