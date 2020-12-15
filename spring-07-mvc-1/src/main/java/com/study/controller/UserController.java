@@ -6,17 +6,44 @@ import com.study.domain.User;
 import com.study.domain.VO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")
 public class UserController {
+
+    @RequestMapping("/quick15")
+    @ResponseBody
+    //http://127.0.0.1:8080/spring/user/quick15 获取请求头内容
+    public void test15(@RequestHeader(value = "User-Agent",required = false) String userAgent,@CookieValue(value = "JSESSIONID",required = false)String sessionId)  {
+        System.out.println(userAgent);
+        System.out.println(sessionId);
+    }
+
+    @RequestMapping("/quick14")
+    @ResponseBody
+    //http://127.0.0.1:8080/spring/user/quick14
+    //格式类型转换器测试
+    /*
+    * 1.创建格式类型转换器 实现org.springframework.core.convert.converter.Converter
+    * 2.自己设置转换方法
+    * 3.在spring-mvc.xml中配置转换工厂 以及在mvc:annotation-driven中配置conversion-service指定对应的bean
+    * */
+    public void test14(Date date)  {
+        System.out.println(date);
+    }
+
+    @RequestMapping("/quick13/{name}")
+    @ResponseBody   //http://127.0.0.1:8080/spring/user/quick13/zhangsan Restful风格获取：get获取 post 新增 put 更新 delete 删除
+    public void getJsonObject3(@PathVariable("name") String username)  {
+        System.out.println(username);
+    }
 
     @RequestMapping("/quick12")
     @ResponseBody   //http://127.0.0.1:8080/spring/user/quick12?name=zhangsan
