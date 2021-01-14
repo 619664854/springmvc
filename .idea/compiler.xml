@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-08-intercepter" />
         <module name="spring-02-ioc" />
         <module name="spring06-tx-anno" />
-        <module name="spring-04-apo" />
+        <module name="spring-06-tx-anno" />
         <module name="spring-07-mvc-1" />
         <module name="spring-05-jdbc" />
         <module name="spring-01" />
+        <module name="spring-04-apo" />
         <module name="spring-06-transaction" />
         <module name="spring-03-anno" />
       </profile>

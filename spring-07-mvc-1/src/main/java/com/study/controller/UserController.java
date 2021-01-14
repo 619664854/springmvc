@@ -7,9 +7,12 @@ import com.study.domain.VO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -17,6 +20,30 @@ import java.util.List;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+
+    @RequestMapping("/quick17")
+    @ResponseBody
+    /**
+     * //http://127.0.0.1:8080/spring/user/quick17 多文件上传
+     * MultipartFile upload 需要与上传文件名称一致
+     */
+    public void test17(String userName, MultipartFile[] upload) throws IOException {
+        System.out.println(userName);
+        for (MultipartFile upload1:upload) {
+            upload1.transferTo(new File("D:\\test\\"+upload1.getOriginalFilename()));
+        }
+    }
+
+    @RequestMapping("/quick16")
+    @ResponseBody
+    /**
+     * //http://127.0.0.1:8080/spring/user/quick16 文件上传
+     * MultipartFile upload 需要与上传文件名称一致
+     */
+    public void test16(String userName, MultipartFile upload) throws IOException {
+        System.out.println(userName);
+        upload.transferTo(new File("D:\\"+upload.getOriginalFilename()));
+    }
 
     @RequestMapping("/quick15")
     @ResponseBody

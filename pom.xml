@@ -17,6 +17,7 @@
         <module>spring-06-transaction</module>
         <module>spring-06-tx-anno</module>
         <module>spring-07-mvc-1</module>
+        <module>spring-08-intercepter</module>
     </modules>
 
     <properties>
@@ -107,6 +108,16 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.11.2</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
         </dependency>
     </dependencies>
 </project>
