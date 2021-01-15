@@ -23,4 +23,17 @@
         <property name="prefix" value="/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--对那些资源执行拦截操作-->
+            <mvc:mapping path="/**"/>
+            <bean class="com.study.interceptor.Myinertceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <!--对那些资源执行拦截操作-->
+            <mvc:mapping path="/**"/>
+            <bean class="com.study.interceptor.Myinertceptor1"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
