@@ -12,6 +12,7 @@ public class InterController {
         System.out.println(1);
         modelAndView.setViewName("study");
         modelAndView.addObject("name","爱丽丝肯德基");
+        modelAndView.addObject("name","爱丽丝肯德基");
         return modelAndView;
     }
 
