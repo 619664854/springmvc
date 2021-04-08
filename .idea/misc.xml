@@ -3,6 +3,8 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/spring-07-mvc-1" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-09-test/src/main/webapp/WEB-INF/web.xml" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-10-test" />
     <file type="web" url="file://$PROJECT_DIR$/test" />
   </component>
   <component name="MavenProjectsManager">
@@ -15,11 +17,12 @@
       <set>
         <option value="$PROJECT_DIR$/spring-01/pom.xml" />
         <option value="$PROJECT_DIR$/spring-07-mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-09-test/pom.xml" />
         <option value="$PROJECT_DIR$/test/pom.xml" />
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

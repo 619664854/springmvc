@@ -6,27 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-03-anno" />
-        <module name="spring-09-test" />
-        <module name="spring-02-ioc" />
-        <module name="spring06-tx-anno" />
-        <module name="spring-08-intercepter" />
-        <module name="spring-07-mvc-1" />
-        <module name="spring-05-jdbc" />
         <module name="spring-01" />
+        <module name="spring-02-ioc" />
+        <module name="spring-03-anno" />
         <module name="spring-04-apo" />
+        <module name="spring-05-jdbc" />
         <module name="spring-06-transaction" />
         <module name="spring-06-tx-anno" />
+        <module name="spring-07-mvc-1" />
+        <module name="spring-08-intercepter" />
+        <module name="spring06-tx-anno" />
+        <module name="spring10test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring-01" target="1.8" />
-      <module name="spring-07-mvc" target="1.8" />
-      <module name="springStudy-01" target="1.5" />
-      <module name="springStudy-02-JDBC" target="1.5" />
-      <module name="studymaven-03-ioc-anno" target="1.5" />
-      <module name="studymaven-04-dongtaidaili" target="1.5" />
-      <module name="test" target="1.8" />
+      <module name="spring-09-test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

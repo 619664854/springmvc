@@ -20,6 +20,7 @@
         <module>spring-08-intercepter</module>
         <module>spring-09-test</module>
         <module>test</module>
+        <module>spring-10-test</module>
     </modules>
 
     <properties>
