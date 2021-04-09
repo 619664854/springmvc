@@ -1,5 +1,7 @@
 package com.spring.domain;
 
+import java.util.List;
+
 public class User {
 
     private Long id;
@@ -8,6 +10,7 @@ public class User {
     private String password;
     private String phoneNum;
 
+    private List<Role> roles;
     public Long getId() {
         return id;
     }
@@ -46,6 +49,14 @@ public class User {
 
     public void setPhoneNum(String phoneNum) {
         this.phoneNum = phoneNum;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 
     @Override
