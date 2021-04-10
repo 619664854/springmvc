@@ -37,7 +37,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void save(User user) {
-        int num = userDao.save(user);
+    public void save(User user, Long[] roleIds) {
+        //保存user信息
+        Long userId = userDao.save(user);
+        //想sys_user_role存储关联关系数据
+        userDao.saveUserRoleRel(userId,roleIds);
     }
 }

@@ -12,5 +12,7 @@ import java.util.List;
 public interface UserDao {
     List<User> findAll();
 
-    int save(User user);
+    Long save(User user);
+
+    void saveUserRoleRel(Long userId, Long[] roleIds);
 }

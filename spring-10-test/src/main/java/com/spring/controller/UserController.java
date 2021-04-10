@@ -1,6 +1,8 @@
 package com.spring.controller;
 
+import com.spring.domain.Role;
 import com.spring.domain.User;
+import com.spring.service.RoleService;
 import com.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,7 +23,8 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
+    @Autowired
+    private RoleService roleService;
     /**
      * @Author Mr.guo
      * @Description 获取用户信息列表
@@ -44,9 +47,18 @@ public class UserController {
      * @Param [role]
      * @return org.springframework.web.servlet.ModelAndView
      **/
+    @RequestMapping("/userUI")
+    public ModelAndView saveUI(){
+        ModelAndView modelAndView = new ModelAndView();
+        List<Role> roleList = roleService.list();
+        modelAndView.addObject("roleList",roleList);
+        modelAndView.setViewName("user-add");
+        return  modelAndView;
+    }
+
     @RequestMapping("/save")
-    public String save(User user){
-        userService.save(user);
-        return  "redirect:/role/list";
+    public String save(User user,Long[] roleIds){
+        userService.save(user,roleIds);
+        return "redirect:/user/list";
     }
 }
