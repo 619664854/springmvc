@@ -24,5 +24,18 @@
     <!--3、静态资源权限开放-->
     <mvc:default-servlet-handler/>
 
+    <!--4.组件扫描-->
     <context:component-scan base-package="com.spring"/>
+
+    <!--5.配置权限拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--对哪些资源执行拦截操作-->
+            <mvc:mapping path="/**"/>
+            <!--配置哪些资源排除拦截操作-->
+            <mvc:exclude-mapping path="/user/login"/>
+            <bean class="com.spring.interceptor.PrivilegeInterecptor"/>
+
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

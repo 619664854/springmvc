@@ -3,6 +3,7 @@ package com.spring.dao.impl;
 import com.spring.dao.UserDao;
 import com.spring.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
@@ -70,4 +71,24 @@ public class UserDaoImpl implements UserDao {
         }
         jdbcTemplate.batchUpdate("insert into sys_user_role values (?,?)",values);
     }
+
+    @Override
+    public int delUser(Long userId) {
+        jdbcTemplate.update("delete from sys_user_role where userId=?",userId);
+        int num = jdbcTemplate.update("delete from sys_user where id=?",userId);
+        return num;
+    }
+
+    @Override
+    public User findUserById(Long id) {
+//        User user = jdbcTemplate.query("select * from sys_user where id=?",new BeanPropertyRowMapper<User>(User.class),id);
+        return null;
+    }
+
+    @Override
+    public User login(String userName, String passWord) throws EmptyResultDataAccessException {
+        User user = jdbcTemplate.queryForObject( "select * from sys_user where username=? and password=?",new BeanPropertyRowMapper<User>(User.class),userName,passWord);
+        return user;
+    }
+
 }

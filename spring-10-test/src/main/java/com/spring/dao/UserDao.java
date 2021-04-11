@@ -15,4 +15,10 @@ public interface UserDao {
     Long save(User user);
 
     void saveUserRoleRel(Long userId, Long[] roleIds);
+
+    int delUser(Long userId);
+
+    User findUserById(Long id);
+
+    User login(String userName, String passWord);
 }

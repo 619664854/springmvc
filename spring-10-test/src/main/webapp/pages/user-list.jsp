@@ -157,7 +157,7 @@
 												</c:forEach>
 											</td>
 											<td class="text-center">
-												<a href="javascript:void(0);" class="btn bg-olive btn-xs">删除</a>
+												<a onclick="delUser(${user.id})" class="btn bg-olive btn-xs">删除</a>
 											</td>
 										</tr>
 
@@ -196,7 +196,31 @@
 			<!-- 底部导航 /-->
 
 		</div>
+		<script>
+			function delUser(userId) {
+			    location.href="${pageContext.request.contextPath}/user/del/"+userId;
+			   /* var data ={"userId":userId};
+				if(confirm("您确定要删除吗？")){
+					$.ajax({
+						type:"post",
+						dataType:"json",
+						data:data,
+						url:"${pageContext.request.contextPath}/user/del",
+						success:function (data) {
+						    debugger
+							console.log(data);
+							if(data == "0"){
+							    location.reload();
+							}
+                        },
+						erroe:function (data) {
+							alert(data);
+                        }
+					});
+				}*/
+            }
 
+		</script>
 		<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
 		<script src="../plugins/jQueryUI/jquery-ui.min.js"></script>
 		<script>

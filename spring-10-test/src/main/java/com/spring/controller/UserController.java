@@ -6,9 +6,12 @@ import com.spring.service.RoleService;
 import com.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -60,5 +63,21 @@ public class UserController {
     public String save(User user,Long[] roleIds){
         userService.save(user,roleIds);
         return "redirect:/user/list";
+    }
+
+    @RequestMapping("/del/{userId}")
+    public String delUser(@PathVariable("userId") Long userId){
+        int num = userService.del(userId);
+        return "redirect:/user/list";
+    }
+
+    @RequestMapping("/login")
+    public String login(String username, String password, HttpSession session){
+        User user = userService.login(username,password);
+        if(user != null){
+            session.setAttribute("user",user);
+            return "redirect:/index.jsp";
+        }
+        return "redirect:/login.jsp";
     }
 }

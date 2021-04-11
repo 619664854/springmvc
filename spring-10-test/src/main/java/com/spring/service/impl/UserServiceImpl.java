@@ -6,6 +6,7 @@ import com.spring.domain.Role;
 import com.spring.domain.User;
 import com.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -42,5 +43,28 @@ public class UserServiceImpl implements UserService {
         Long userId = userDao.save(user);
         //想sys_user_role存储关联关系数据
         userDao.saveUserRoleRel(userId,roleIds);
+    }
+
+    @Override
+    public int del(Long userId) {
+        int num = userDao.delUser(userId);
+        return num;
+    }
+
+    @Override
+    public User findUserById(Long id) {
+        User user = userDao.findUserById(id);
+        return null;
+    }
+
+    @Override
+    public User login(String userName, String passWord) {
+        User user = null;
+        try {
+            user = userDao.login(userName,passWord);
+        } catch (EmptyResultDataAccessException e) {
+            e.printStackTrace();
+        }
+        return user;
     }
 }
