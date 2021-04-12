@@ -1,4 +1,4 @@
-package com.spring.domain;
+package coms.spring.domain;
 
 public class Role {
 

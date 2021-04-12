@@ -1,8 +1,8 @@
-package com.spring.service.impl;
+package coms.spring.service.impl;
 
-import com.spring.dao.RoleDao;
-import com.spring.domain.Role;
-import com.spring.service.RoleService;
+import coms.spring.dao.RoleDao;
+import coms.spring.domain.Role;
+import coms.spring.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

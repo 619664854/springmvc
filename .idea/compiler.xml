@@ -17,6 +17,7 @@
         <module name="spring-08-intercepter" />
         <module name="spring06-tx-anno" />
         <module name="spring10test" />
+        <module name="spring11exception" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

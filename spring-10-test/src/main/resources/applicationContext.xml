@@ -22,7 +22,7 @@
         <property name="dataSource" ref="dataSouce"/>
     </bean>
 
-    <!--<bean id="roleDao" class="com.spring.dao.impl.RoleDaoImpl">
+    <!--<bean id="roleDao" class="RoleDaoImpl">
         <property name="jdbcTemplate" ref="jdbcTemplate"/>
     </bean>-->
 </beans>

@@ -1,6 +1,6 @@
-package com.spring.dao;
+package coms.spring.dao;
 
-import com.spring.domain.User;
+import coms.spring.domain.User;
 
 import java.util.List;
 

@@ -34,7 +34,7 @@
             <mvc:mapping path="/**"/>
             <!--配置哪些资源排除拦截操作-->
             <mvc:exclude-mapping path="/user/login"/>
-            <bean class="com.spring.interceptor.PrivilegeInterecptor"/>
+            <bean class="coms.spring.interceptor.PrivilegeInterecptor"/>
 
         </mvc:interceptor>
     </mvc:interceptors>

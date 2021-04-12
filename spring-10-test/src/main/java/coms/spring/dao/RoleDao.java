@@ -1,6 +1,6 @@
-package com.spring.dao;
+package coms.spring.dao;
 
-import com.spring.domain.Role;
+import coms.spring.domain.Role;
 
 import java.util.List;
 

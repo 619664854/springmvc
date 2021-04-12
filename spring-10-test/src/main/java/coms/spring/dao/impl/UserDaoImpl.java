@@ -1,7 +1,7 @@
-package com.spring.dao.impl;
+package coms.spring.dao.impl;
 
-import com.spring.dao.UserDao;
-import com.spring.domain.User;
+import coms.spring.dao.UserDao;
+import coms.spring.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;

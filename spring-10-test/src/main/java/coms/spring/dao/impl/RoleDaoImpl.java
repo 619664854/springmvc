@@ -1,8 +1,7 @@
-package com.spring.dao.impl;
+package coms.spring.dao.impl;
 
-import com.spring.dao.RoleDao;
-import com.spring.domain.Role;
-import org.springframework.beans.factory.annotation.Autowired;
+import coms.spring.dao.RoleDao;
+import coms.spring.domain.Role;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

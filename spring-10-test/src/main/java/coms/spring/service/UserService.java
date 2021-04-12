@@ -1,6 +1,6 @@
-package com.spring.service;
+package coms.spring.service;
 
-import com.spring.domain.User;
+import coms.spring.domain.User;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.spring.interceptor;
+package coms.spring.interceptor;
 
-import com.spring.domain.User;
+import coms.spring.domain.User;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;

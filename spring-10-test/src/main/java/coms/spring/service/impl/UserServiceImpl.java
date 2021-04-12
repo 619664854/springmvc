@@ -1,10 +1,10 @@
-package com.spring.service.impl;
+package coms.spring.service.impl;
 
-import com.spring.dao.RoleDao;
-import com.spring.dao.UserDao;
-import com.spring.domain.Role;
-import com.spring.domain.User;
-import com.spring.service.UserService;
+import coms.spring.dao.RoleDao;
+import coms.spring.dao.UserDao;
+import coms.spring.domain.Role;
+import coms.spring.domain.User;
+import coms.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;

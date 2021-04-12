@@ -1,6 +1,6 @@
-package com.spring.service;
+package coms.spring.service;
 
-import com.spring.domain.Role;
+import coms.spring.domain.Role;
 
 import java.util.List;
 
