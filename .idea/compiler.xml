@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spirngmybatisquick" />
         <module name="spring-01" />
         <module name="spring-02-ioc" />
         <module name="spring-03-anno" />
@@ -23,6 +24,7 @@
     <bytecodeTargetLevel>
       <module name="spring-01" target="1.8" />
       <module name="spring-09-test" target="1.8" />
+      <module name="spring11mybatisquick" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

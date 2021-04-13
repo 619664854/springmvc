@@ -11,6 +11,7 @@
     </session>
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/spirng-mybatis-quick" />
     <file type="web" url="file://$PROJECT_DIR$/spring-07-mvc-1" />
     <file type="web" url="file://$PROJECT_DIR$/spring-09-test/src/main/webapp/WEB-INF/web.xml" />
     <file type="web" url="file://$PROJECT_DIR$/spring-10-test" />
@@ -25,6 +26,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/spring-01/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-11-mybatis-quick/pom.xml" />
       </set>
     </option>
   </component>

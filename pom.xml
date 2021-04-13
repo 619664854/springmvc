@@ -22,6 +22,8 @@
         <module>test</module>
         <module>spring-10-test</module>
         <module>spring-11-exception</module>
+        <module>spring-11-mybatis-quick</module>
+        <module>spirng-mybatis-quick</module>
     </modules>
 
     <properties>
