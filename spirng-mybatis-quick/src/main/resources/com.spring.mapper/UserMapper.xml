@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="userMapper">
+<mapper namespace="userMapper" >
     <!--resultType结果类型
         parameterType 参数类型
     -->
 
-    <delete id="delete" parameterType="java.lang.Integer">
+    <delete id="delete" parameterType="int">
         delete from user where id=#{id}
     </delete>
 
-    <update id="update" parameterType="com.spring.domain.User">
+    <update id="update" parameterType="user">
         update user set username=#{username},password=#{password}
         where id=#{id}
     </update>
 
-    <select id="findAll" resultType="com.spring.domain.User">
+    <select id="findAll" resultType="user">
         select * from user
     </select>
-    <insert id="save" parameterType="com.spring.domain.User" >
+    <insert id="save" parameterType="user" >
         insert  into user values (#{id} ,#{username},#{password});
     </insert>
+    <select id="findById" parameterType="int" resultType="user">
+        select * from user where id=#{id}
+    </select>
 </mapper>

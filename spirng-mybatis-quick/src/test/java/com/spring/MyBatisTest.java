@@ -62,6 +62,15 @@ public class MyBatisTest {
         sqlSession.close();
     }
 
+    @Test
+    public void test5() throws IOException {
+        SqlSession sqlSession = getSession();
+        //执行操作 参数namespace.id
+        User user = sqlSession.selectOne("userMapper.findById",2);
+        System.out.println(user);
+        sqlSession.close();
+    }
+
     public SqlSession getSession() throws IOException {
         //获得核心控制文件
         InputStream resourceAsStream = Resources.getResourceAsStream("MyBatisMapperConfig.xml");
