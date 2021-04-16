@@ -16,6 +16,7 @@
     <file type="web" url="file://$PROJECT_DIR$/spring-09-test/src/main/webapp/WEB-INF/web.xml" />
     <file type="web" url="file://$PROJECT_DIR$/spring-10-test" />
     <file type="web" url="file://$PROJECT_DIR$/spring-mybatis-dao" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-mybatis-mapper" />
     <file type="web" url="file://$PROJECT_DIR$/test" />
   </component>
   <component name="MavenProjectsManager">

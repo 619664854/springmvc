@@ -22,6 +22,8 @@
         <module>spring-11-exception</module>
         <module>spirng-mybatis-quick</module>
         <module>spring-mybatis-dao</module>
+        <module>spring-mybatis-mapper</module>
+        <module>spring-mybatis-config</module>
     </modules>
 
     <properties>
