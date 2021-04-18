@@ -24,6 +24,7 @@
         <module>spring-mybatis-dao</module>
         <module>spring-mybatis-mapper</module>
         <module>spring-mybatis-config</module>
+        <module>spring-mybatis-multi</module>
     </modules>
 
     <properties>

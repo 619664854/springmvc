@@ -22,6 +22,7 @@
         <module name="springmybatisconfig" />
         <module name="springmybatisdao" />
         <module name="springmybatismapper" />
+        <module name="springmybatismulti" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
