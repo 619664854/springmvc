@@ -10,9 +10,18 @@
         <id column="id" property="id"></id>
         <result column="ordertime" property="ordertime"></result>
         <result column="total" property="total"></result>
-        <result column="pid" property="user.id"/>
+        <!--<result column="pid" property="user.id"/>
         <result column="username" property="user.username"/>
-        <result column="birthday" property="user.birthday"/>
+        <result column="birthday" property="user.birthday"/>-->
+        <!--
+            propertu:指当前实体属性名称（private User user）
+            javaType：当前实体属性类型(User) 可以用别名
+        -->
+        <association property="user" javaType="user">
+            <id column="ipd" property="id"/>
+            <result column="username" property="username"/>
+            <result column="password" property="password"/>
+        </association>
     </resultMap>
 
     <select id="findAll" resultMap="orderMap">

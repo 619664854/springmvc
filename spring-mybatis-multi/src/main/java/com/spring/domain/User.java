@@ -1,5 +1,8 @@
 package com.spring.domain;
 
+import java.util.Date;
+import java.util.List;
+
 /**
  * @ClassName:User
  * @Author Mr.guo
@@ -11,6 +14,8 @@ public class User {
     private int id;
     private String username;
     private String password;
+
+    private List<Order> orderList;
 
     public int getId() {
         return id;
@@ -36,12 +41,21 @@ public class User {
         this.password = password;
     }
 
+    public List<Order> getOrderList() {
+        return orderList;
+    }
+
+    public void setOrderList(List<Order> orderList) {
+        this.orderList = orderList;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", orderList=" + orderList +
                 '}';
     }
 }

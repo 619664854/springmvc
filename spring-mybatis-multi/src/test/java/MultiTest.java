@@ -1,5 +1,7 @@
 import com.spring.domain.Order;
+import com.spring.domain.User;
 import com.spring.mapper.OrderMapper;
+import com.spring.mapper.UserMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -16,7 +18,18 @@ import java.util.List;
  * @Date 2021/4/18 19:19
  */
 public class MultiTest {
+    @Test
+    public void test2() throws IOException {
+        InputStream resourceAsStream = Resources.getResourceAsStream("mapperConfig.xml");
+        SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder().build(resourceAsStream);
+        SqlSession sqlSession = sessionFactory.openSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        List<User> userList = userMapper.findAll();
+        for (User user : userList) {
+            System.out.println(user);
+        }
 
+    }
     @Test
     public void test1() throws IOException {
         InputStream resourceAsStream = Resources.getResourceAsStream("mapperConfig.xml");

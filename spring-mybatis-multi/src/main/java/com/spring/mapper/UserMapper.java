@@ -1,5 +1,9 @@
 package com.spring.mapper;
 
+import com.spring.domain.User;
+
+import java.util.List;
+
 /**
  * @ClassName:UserDao
  * @Author Mr.guo
@@ -7,4 +11,5 @@ package com.spring.mapper;
  */
 public interface UserMapper {
 
+    public List<User> findAll();
 }
