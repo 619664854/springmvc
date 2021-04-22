@@ -13,6 +13,7 @@
     <typeAliases>
         <typeAlias type="com.spring.domain.User" alias="user"></typeAlias>
         <typeAlias type="com.spring.domain.Order" alias="order"></typeAlias>
+        <typeAlias type="com.spring.domain.Role" alias="role"></typeAlias>
     </typeAliases>
 
 

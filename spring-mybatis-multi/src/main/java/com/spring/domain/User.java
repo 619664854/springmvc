@@ -17,6 +17,16 @@ public class User {
 
     private List<Order> orderList;
 
+    private List<Role> roleList;
+
+    public List<Role> getRoleList() {
+        return roleList;
+    }
+
+    public void setRoleList(List<Role> roleList) {
+        this.roleList = roleList;
+    }
+
     public int getId() {
         return id;
     }
@@ -56,6 +66,7 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", orderList=" + orderList +
+                ", roleList=" + roleList +
                 '}';
     }
 }

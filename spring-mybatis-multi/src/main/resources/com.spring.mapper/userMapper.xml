@@ -17,4 +17,27 @@
         where u.id=o.pid
     </select>
 
+
+    <resultMap id="userRoleMap" type="user">
+        <id column="userId" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <collection property="roleList" ofType="role">
+            <id column="roleId" property="id"/>
+            <result column="roleName" property="roleName"/>
+            <result column="roleDesc" property="roleDesc"/>
+        </collection>
+    </resultMap>
+
+    <select id="findUserAll" resultMap="userRoleMap">
+        SELECT * from user u,sys_user_role ur,sys_role r
+        where u.id=ur.userId and ur.roleId = r.id
+    </select>
+
+    <!--用左外连接可以把没有角色的也查询出来-->
+    <select id="findAllUser" resultMap="userRoleMap">
+        SELECT * from user u
+        LEFT JOIN sys_user_role ur ON u.id=ur.userId
+        LEFT JOIN sys_role r on ur.roleId = r.id
+    </select>
 </mapper>

@@ -18,6 +18,24 @@ import java.util.List;
  * @Date 2021/4/18 19:19
  */
 public class MultiTest {
+
+    @Test
+    public void test3() throws IOException {
+        InputStream resourceAsStream = Resources.getResourceAsStream("mapperConfig.xml");
+        SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder().build(resourceAsStream);
+        SqlSession sqlSession = sessionFactory.openSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        List<User> userList = userMapper.findUserAll();
+        for (User user : userList) {
+            System.out.println(user);
+        }
+
+        List<User> allUserList = userMapper.findAllUser();
+        for (User user : allUserList) {
+            System.out.println(user);
+        }
+    }
+
     @Test
     public void test2() throws IOException {
         InputStream resourceAsStream = Resources.getResourceAsStream("mapperConfig.xml");

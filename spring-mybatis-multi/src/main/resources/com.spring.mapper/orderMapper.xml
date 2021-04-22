@@ -14,6 +14,7 @@
         <result column="username" property="user.username"/>
         <result column="birthday" property="user.birthday"/>-->
         <!--
+            association可以封装一个实体类对象到实体类中某个属性中
             propertu:指当前实体属性名称（private User user）
             javaType：当前实体属性类型(User) 可以用别名
         -->
