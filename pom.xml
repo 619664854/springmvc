@@ -25,6 +25,7 @@
         <module>spring-mybatis-mapper</module>
         <module>spring-mybatis-config</module>
         <module>spring-mybatis-multi</module>
+        <module>spring-mybatis-anno</module>
     </modules>
 
     <properties>

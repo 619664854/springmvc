@@ -19,6 +19,7 @@
         <module name="spring06-tx-anno" />
         <module name="spring10test" />
         <module name="spring11exception" />
+        <module name="springmybatisanno" />
         <module name="springmybatisconfig" />
         <module name="springmybatisdao" />
         <module name="springmybatismapper" />
